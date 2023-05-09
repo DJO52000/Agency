@@ -31,22 +31,15 @@
   box-sizing: border-box;
 }
 
+img {
+  display: block;
+}
+
 html {
   font-family: var(--ff-base);
   line-height: 1.6;
   font-size: var(--fs-400);
   color: var(--clr-base-400);
-}
-
-.tag {
-  font-size: var(--fs-300);
-  font-weight: var(--fw-700);
-  display: inline-block;
-  padding: 0.15em 0.5em;
-  border-radius: 100vw;
-  margin-right: 0.5em;
-  background: var(--bg, lightgrey);
-  color: var(--fg, #333);
 }
 
 .ux {
@@ -64,8 +57,34 @@ html {
   --fg: var(--clr-dev-400);
 }
 
+.tag {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-700);
+  display: inline-block;
+  padding: 0.15em 0.5em;
+  border-radius: 100vw;
+  margin-right: 0.5em;
+  background: var(--bg, lightgrey);
+  color: var(--fg, #333);
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.5em 3em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--fg, #fff);
+  background: var(--bg, var(--clr-accent-400));
+  border-radius: var(--border-radius);
+}
+
 .candidate {
   padding: 1em;
+}
+
+.candidate > img {
+  border-radius: var(--border-radius);
 }
 
 .candidate .name,
@@ -79,6 +98,31 @@ html {
   font-size: var(--fs-500);
   color: var(--clr-base-500);
   line-height: 1;
+}
+
+.candidate .roles {
+  line-height: 1;
+  font-size: var(--fs-300);
+}
+
+.candidate .social {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.candidate .social a:hover,
+.candidate .social a:focus {
+  opacity: 0.5;
+}
+
+.candidate .btn {
+  /* margin-top: auto;
+  margin-left: auto; */
+  justify-self: end;
+  align-self: end;
 }
 
 /* /////////////////
